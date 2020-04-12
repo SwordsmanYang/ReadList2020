@@ -52,17 +52,22 @@ C++静态对象加载、调用ObjC的 +load 函数
 
 一.概念篇  
 1.isEqual比较值，==比较内存地址 
-2.深度等同性判定 比较两个数组是否相等的话可以使用深度同等性判断方法： 1）先比较数组的个数   
-2）再比较两个数组对应位置上的对象均相等。
-3）子类EOCSubClass并没有覆写initialize方法，那么自然会调用其父类EOCBaseClass的方法。 
+2.深度等同性判定 比较两个数组是否相等的话可以使用深度同等性判断方法：  1）先比较数组的个数    
+2）再比较两个数组对应位置上的对象均相等。 
+3）子类EOCSubClass并没有覆写initialize方法，那么自然会调用其父类EOCBaseClass的方法。  
 4）使用“类族”(class cluster)这一设计模式，通过“抽象基类”来实例化不同的实体子类，隐藏实现细节，抽象工厂
 
-等m，比较基础
+等，比较基础 
+其他两篇不怎么深入，不概括了
 
 
 ## 分类
 - [优化@](#优化)
+- [基础@](#基础)
 
 #### 优化@
 * [iOS启动时间优化](http://www.zoomfeng.com/blog/launch-time.html) 
 * [iOS 界面性能优化浅析](https://coderzsq.github.io/2018/07/iOS-%E7%95%8C%E9%9D%A2%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%B5%85%E6%9E%90/) 
+
+#### 基础@
+* [《Effective Objective-C》干货三部曲（一）：概念篇](https://juejin.im/post/5a4f34226fb9a01cb0492016)   
