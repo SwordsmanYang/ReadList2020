@@ -31,8 +31,6 @@ C++静态对象加载、调用ObjC的 +load 函数
 调用UIApplicationMain()  
 调用applicationWillFinishLaunching  
 
-![](http://www.zoomfeng.com/images/2018/07/3.png)  
-
 二 优化策略  
 1.减少非系统库的依赖  
 2.检查下 framework应当设为optional和required  
@@ -47,9 +45,24 @@ C++静态对象加载、调用ObjC的 +load 函数
 9.启动阶段使用合理的多线程来进行初始化，把CPU的性能尽量发挥出来  
 10.使用纯代码而不是xib或者storyboard来进行UI框架的搭建  
 
+* [iOS 界面性能优化浅析](https://coderzsq.github.io/2018/07/iOS-%E7%95%8C%E9%9D%A2%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%B5%85%E6%9E%90/)   
+对于界面的性能优化, 简单的说就是保持界面流畅不掉帧, 当然原理这种网上一搜一大把   有空的话看看YYKit也就能够知晓个大概. 硬是要说原理的话   就是当Vsync信号来临的16.67ms内CPU做完排版, 绘制, 解码, GPU避免离屏渲染之类的   就会在Runloop下一次来临的时候渲染到屏幕上.  
+
+* [《Effective Objective-C》干货三部曲（一）：概念篇](https://juejin.im/post/5a4f34226fb9a01cb0492016)   
+
+一.概念篇  
+1.isEqual比较值，==比较内存地址 
+2.深度等同性判定 比较两个数组是否相等的话可以使用深度同等性判断方法： 1）先比较数组的个数   
+2）再比较两个数组对应位置上的对象均相等。
+3）子类EOCSubClass并没有覆写initialize方法，那么自然会调用其父类EOCBaseClass的方法。 
+4）使用“类族”(class cluster)这一设计模式，通过“抽象基类”来实例化不同的实体子类，隐藏实现细节，抽象工厂
+
+等m，比较基础
+
 
 ## 分类
 - [优化@](#优化)
 
 #### 优化@
 * [iOS启动时间优化](http://www.zoomfeng.com/blog/launch-time.html) 
+* [iOS 界面性能优化浅析](https://coderzsq.github.io/2018/07/iOS-%E7%95%8C%E9%9D%A2%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%B5%85%E6%9E%90/) 
