@@ -73,6 +73,9 @@ C++静态对象加载、调用ObjC的 +load 函数
 6.CBCentralManager对象不可以同时存在多个，设备最多连接7个
 7.设备UUID在不同的设备上不一样，在同一个设备上一样
 
+* [iOS绘图框架CoreGraphics分析](http://www.cocoachina.com/articles/20187)   
+UIKit依赖CoreGraphics，CoreGraphics会用到Quart 2D的api  
+绘图基本就是对API的理解和灵活搭配，主要非OC对象创建后需要自己去g释放
 
 ## 分类
 - [优化@](#优化)
@@ -84,7 +87,8 @@ C++静态对象加载、调用ObjC的 +load 函数
 * [iOS 界面性能优化浅析](https://coderzsq.github.io/2018/07/iOS-%E7%95%8C%E9%9D%A2%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%B5%85%E6%9E%90/) 
 
 #### 基础@
-* [《Effective Objective-C》干货三部曲（一）：概念篇](https://juejin.im/post/5a4f34226fb9a01cb0492016)   
+* [《Effective Objective-C》干货三部曲（一）：概念篇](https://juejin.im/post/5a4f34226fb9a01cb0492016) 
+* [iOS绘图框架CoreGraphics分析](http://www.cocoachina.com/articles/20187)   
 
 #### 硬件相关@
 * [BLE传输大数据](https://www.jianshu.com/p/b71e9394a60a)  
