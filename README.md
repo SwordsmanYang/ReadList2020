@@ -75,12 +75,44 @@ C++静态对象加载、调用ObjC的 +load 函数
 
 * [iOS绘图框架CoreGraphics分析](http://www.cocoachina.com/articles/20187)   
 UIKit依赖CoreGraphics，CoreGraphics会用到Quart 2D的api  
-绘图基本就是对API的理解和灵活搭配，主要非OC对象创建后需要自己去g释放
+绘图基本就是对API的理解和灵活搭配，主要非OC对象创建后需要自己去释放
+
+### 4-14  
+* [基于LLVM开发属于自己Xcode的Clang插件](https://www.cnblogs.com/guwudao/p/9492022.html)  
+LLVM插件开发的质量依赖于开发者对编译器编译原理和编译器各种API，语法书等的了解熟悉程度，其基本开发流程如下：
+1.下载LLVM，clang,编译工具使用ninja和cmake
+2.xcode编译生产新的LLVM
+3.修改LLVM的一些函数等
+4.替换原有的Xcode的LLVM
+
+### 4-23
+* [iOS Memory Deep Dive](https://www.cnblogs.com/guwudao/p/9492022.html)  
+内存管理两个开发框架  
+1. MLeaksFinder 腾讯  
+2. FBRetainCycleDetector FB  
+高效使用内存：   
+1.避免内存泄漏  
+2.复用机制  
+3.非OC对象创建后需要手动释放  
+4.懒加载  
+5.使用自动释放池避免提前释放  
+6.内存警告的时候主动释放   
+
+* [巧妙实现 debugOnly 函数](https://kemchenj.github.io/2018-09-24/)   
+condition 由于 @autoclosure 的标记会把传入的值自动装到闭包里，然后只有在 debug 模式下才会执行并且求值，通过这种方式就可以很完美地实现一个 debugOnly 函数。
+
+* [Hook所有+load方法（包括Category）](https://mp.weixin.qq.com/s/kL__CM3CfP_7i8Obg8qzWQ) 
+在做启动优化的时候可以用到
+
+
 
 ## 分类
 - [优化@](#优化)
 - [基础@](#基础)
 - [硬件相关@](#硬件相关)
+- [工具开发@](#工具开发)
+- [内存管理@](#内存管理)
+- [小技巧@](#小技巧)
 
 #### 优化@
 * [iOS启动时间优化](http://www.zoomfeng.com/blog/launch-time.html) 
@@ -92,3 +124,13 @@ UIKit依赖CoreGraphics，CoreGraphics会用到Quart 2D的api
 
 #### 硬件相关@
 * [BLE传输大数据](https://www.jianshu.com/p/b71e9394a60a)  
+
+#### 工具开发@
+* [基于LLVM开发属于自己Xcode的Clang插件](https://www.cnblogs.com/guwudao/p/9492022.html) 
+
+#### 内存管理@
+* [iOS Memory Deep Dive](https://www.cnblogs.com/guwudao/p/9492022.html)  
+
+#### 小技巧@
+* [巧妙实现 debugOnly 函数](https://kemchenj.github.io/2018-09-24/)   
+* [Hook所有+load方法（包括Category）](https://mp.weixin.qq.com/s/kL__CM3CfP_7i8Obg8qzWQ)
